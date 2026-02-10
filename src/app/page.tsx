@@ -1,20 +1,10 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import WorkSection from "@/components/WorkSection";
-import Capabilities from "@/components/Capabilities";
-import BlazeShift from "@/components/BlazeShift";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <About />
-      <WorkSection />
-      <Capabilities />
-      <BlazeShift />
-      <Contact />
+      <LandingPage />
       <Footer />
     </main>
   );

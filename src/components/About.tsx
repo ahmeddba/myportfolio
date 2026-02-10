@@ -136,11 +136,11 @@ export default function About() {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
-                  <p className="text-3xl font-bold text-foreground">2+</p>
+                  <p className="text-3xl font-bold text-foreground">2</p>
                   <p className="text-sm text-muted">Years Experience</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-foreground">20+</p>
+                  <p className="text-3xl font-bold text-foreground">10</p>
                   <p className="text-sm text-muted">Projects Shipped</p>
                 </div>
                 <div>

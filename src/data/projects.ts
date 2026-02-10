@@ -67,7 +67,7 @@ export const projects: Project[] = [
         image: "/projects/2mo/admindash.png",
         title: "Admin Analytics Dashboard",
         description:
-          "A real-time operational cockpit that tracks users, doctors, cases, invitations, and revenue — giving admins instant control over the platform health.",
+          "A real-time operational cockpit that tracks users, doctors, cases, invitations, and revenue, giving admins instant control over platform health.",
         features: [
           "KPI tiles for users, doctors, cases, and paid invoices",
           "Daily charts for new users and medical cases",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
         image: "/projects/2mo/createmc1.png",
         title: "Guided Case Intake Wizard",
         description:
-          "A step-by-step case creation flow that standardizes patient data capture and reduces incomplete submissions — improving review speed and accuracy.",
+          "A step-by-step case creation flow that standardizes patient data capture and reduces incomplete submissions, improving review speed and accuracy.",
         features: [
           "Multi-step progress flow (patient info → questions → documents → validation)",
           "Structured personal + contact data capture",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
         image: "/projects/2mo/invoicee.png",
         title: "Invoicing & Payment-Ready Documents",
         description:
-          "Automated, professional invoicing that turns case work into trackable revenue — with line items, totals, tax, due dates, and payment info.",
+          "Automated, professional invoicing that turns case work into trackable revenue, with line items, totals, tax, due dates, and payment info.",
         features: [
           "Invoice generation tied to medical case and patient identity",
           "Itemized services with quantity, rates, and tax totals",
@@ -213,7 +213,7 @@ export const projects: Project[] = [
     tag: "MedTech / Digital Dentistry",
     slogan: "From scan to surgery. Precision without guesswork.",
     overview:
-      "SurgiGuideX is a digital dentistry platform that streamlines guided implant surgery workflows. It centralizes case submission, surgical planning, guide selection, and 3D guide fabrication into a single, clinician-focused experience—reducing errors, saving time, and improving surgical predictability.",
+      "SurgiGuideX is a digital dentistry platform that streamlines guided implant surgery workflows. It centralizes case submission, surgical planning, guide selection, and 3D guide fabrication into a single, clinician-focused experience, reducing errors, saving time, and improving surgical predictability.",
     production: {
       url: "https://surgiguidex.com",
       label: "Open SurgiGuideX Platform",

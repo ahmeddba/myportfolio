@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#capabilities", label: "Capabilities" },
-  { href: "#blazeshift", label: "BlazeShift" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/work", label: "Work" },
+  { href: "/capabilities", label: "Capabilities" },
+  { href: "/blazeshift", label: "BlazeShift" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -36,23 +37,23 @@ export default function Navigation() {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="text-lg font-medium tracking-tight hover:text-accent transition-colors"
         >
           Ahmed Ben Abid
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="text-sm text-muted hover:text-foreground transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -96,13 +97,13 @@ export default function Navigation() {
             <ul className="container mx-auto px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-lg text-muted hover:text-foreground transition-colors block py-2"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -112,3 +113,4 @@ export default function Navigation() {
     </motion.header>
   );
 }
+

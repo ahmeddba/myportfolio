@@ -96,3 +96,236 @@ section {
   margin: 0 auto;
   width: 100%;
 }
+
+/* ========== Typing Cursor ========== */
+.typing-cursor {
+  color: var(--accent);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+.typing-cursor--blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ========== 3D Suitcase ========== */
+.suitcase-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.suitcase-link:hover {
+  color: inherit;
+}
+
+.suitcase {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1.5px solid var(--border);
+  background: linear-gradient(145deg, var(--card) 0%, rgba(15, 15, 15, 0.98) 100%);
+  overflow: hidden;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.suitcase--hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Stars ---- */
+.suitcase-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.suitcase-star {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  animation: star-drift 5s ease-in-out infinite;
+}
+
+/* On hover — fast circular orbit */
+.suitcase-star--fast {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent), 0 0 16px rgba(59, 130, 246, 0.3);
+  animation: star-orbit 1.5s linear infinite;
+}
+
+@keyframes star-drift {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+
+  25% {
+    transform: translate(4px, -5px);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translate(-3px, 3px);
+    opacity: 0.35;
+  }
+
+  75% {
+    transform: translate(5px, 4px);
+    opacity: 0.55;
+  }
+}
+
+@keyframes star-orbit {
+  0% {
+    transform: translate(0, 0) scale(1.2);
+    opacity: 0.6;
+  }
+
+  25% {
+    transform: translate(12px, -8px) scale(1.5);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0px, -14px) scale(1);
+    opacity: 0.7;
+  }
+
+  75% {
+    transform: translate(-12px, -8px) scale(1.4);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* ---- Handle ---- */
+.suitcase-handle {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 12px;
+  z-index: 5;
+}
+
+.suitcase-handle-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px 6px 2px 2px;
+  border: 1.5px solid var(--border);
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.6) 0%, rgba(25, 25, 25, 0.8) 100%);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.suitcase--hover .suitcase-handle-bar {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+}
+
+/* ---- Card face content ---- */
+.suitcase-face {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 28px 16px 16px;
+  gap: 8px;
+  text-align: center;
+}
+
+.suitcase-icon {
+  color: var(--muted);
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.suitcase--hover .suitcase-icon {
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+}
+
+.suitcase-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.suitcase--hover .suitcase-title {
+  color: var(--accent);
+}
+
+.suitcase-description {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 200px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.suitcase--hover .suitcase-description {
+  opacity: 1;
+}
+
+/* ---- XP Badge ---- */
+.suitcase-xp {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #000;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  box-shadow: 0 2px 12px rgba(250, 204, 21, 0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .suitcase {
+    height: 180px;
+  }
+
+  .suitcase-description {
+    font-size: 0.68rem;
+  }
+}
